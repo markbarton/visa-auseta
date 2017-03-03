@@ -648,12 +648,12 @@ app.controller("formController", ['$scope', '$http', '$window', '$uibModal', '$l
         email.subject 			= "Australian ETA Visa Application via Trailfinders";
         email.send_to			= $scope.visaAusETA.Email;
         email.reply_to 			= $scope.siteSpecific.emailfrom;
-        email.bcc		 		= "Jerry.Shelley@Trailfinders.com";
         email.email_body 		=
             '<span style="font-family:Arial;">'
             +"<strong>Australian ETA Visa Application</strong>"
             +"<br />"
             +"<br />Thank you for submitting your Visa Application with Trailfinders."
+            +"<br />Your ETA has been approved."
             +"<br />"
             +"<br />Your Booking Reference is <strong>" + $scope.visaAusETA.SuperfactsBookingRef + "</strong>"
             +"<br />"
@@ -687,7 +687,7 @@ app.controller("formController", ['$scope', '$http', '$window', '$uibModal', '$l
         //Post an email to API server to send to developer.
         var email = {};
         email.subject 			= "Australian ETA Visa Application Error";
-        email.send_to			= "Jerry.Shelley@Trailfinders.com"; 		// "Intranet@Trailfinders.com";
+        email.send_to			= "intranet@trailfinders.com"; 		// "Intranet@Trailfinders.com";
         email.email_body 		=
             '<span style="font-family:Arial;">'
             +"<strong>Australian ETA Visa Application Error </strong>"
